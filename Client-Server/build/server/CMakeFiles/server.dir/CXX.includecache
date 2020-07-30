@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/EasyTcpServer.hpp
+iostream
+-
+MessageHeader.hpp
+../include/MessageHeader.hpp
+vector
+-
+unistd.h
+-
+arpa/inet.h
+-
+string.h
+-
+
+../include/MessageHeader.hpp
+
+/home/gf/Client-Server/server/server.cpp
+EasyTcpServer.hpp
+/home/gf/Client-Server/server/EasyTcpServer.hpp
+thread
+-
+
