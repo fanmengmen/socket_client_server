@@ -90,6 +90,7 @@ server_EXTERNAL_OBJECTS =
 
 server/server: server/CMakeFiles/server.dir/server.cpp.o
 server/server: server/CMakeFiles/server.dir/build.make
+server/server: http/libhttp.so
 server/server: server/CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gf/Client-Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server"
 	cd /home/gf/Client-Server/build/server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)

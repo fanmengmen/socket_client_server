@@ -22,7 +22,37 @@ string.h
 
 ../include/MessageHeader.hpp
 
+../include/consistenceHash.hpp
+map
+-
+
+../include/murmurhash.hpp
+stdint.h
+-
+
 /home/gf/Client-Server/client/client.cpp
 EasyTcpClient.hpp
 /home/gf/Client-Server/client/EasyTcpClient.hpp
+consistenceHash.hpp
+/home/gf/Client-Server/client/consistenceHash.hpp
+vector
+-
+sstream
+-
+
+/home/gf/Client-Server/client/consistenceHash.cpp
+map
+-
+string.h
+-
+sstream
+-
+consistenceHash.hpp
+/home/gf/Client-Server/client/consistenceHash.hpp
+murmurhash.hpp
+/home/gf/Client-Server/client/murmurhash.hpp
+
+/home/gf/Client-Server/client/murmurshash.cpp
+murmurhash.hpp
+/home/gf/Client-Server/client/murmurhash.hpp
 

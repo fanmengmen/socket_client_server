@@ -47,7 +47,7 @@ class EasyTcpServer
             }
             else
             {
-                printf("creat socket sucessfully!\n");  
+                // printf("creat socket sucessfully!\n");  
             }
              
             return _sock;
@@ -75,6 +75,7 @@ class EasyTcpServer
             else
             {
                 printf("bind internet port succesfully...\n");
+                this->port = port;
             }
             
         }
@@ -113,7 +114,7 @@ class EasyTcpServer
                     SendData(_csock, &userJoin);
                 }
                 g_clients.push_back(_csock);
-                printf("socket = <%d> new client add in : socket = %d, IP = %s \n", _csock, (int)_sock, inet_ntoa(clientAddr.sin_addr));
+                printf("port = <%d> new client add in : socket = %d, IP = %s \n", port, (int)_sock, inet_ntoa(clientAddr.sin_addr));
                 
             }
 
@@ -182,6 +183,7 @@ class EasyTcpServer
                             auto iter = g_clients.begin() + n;
                             if(iter != g_clients.end())
                             {
+                                close(*iter);
                                 g_clients.erase(iter);
                             }
 
@@ -208,7 +210,7 @@ class EasyTcpServer
             DataHeader* header = reinterpret_cast<DataHeader*>(szRecv);
             if(nLen <= 0)
             {
-                printf("client<socket=%d> exit, mission over...\n", _csock);
+                // printf("client<socket=%d> exit, mission over...\n", _csock);
                 return -1;
             }
             if(header->dataLength - sizeof(DataHeader) > 0)
@@ -225,8 +227,8 @@ class EasyTcpServer
             case CMD_LOGIN:
             {
                 Login* login = static_cast<Login*>(header);
-                printf("received client <socket=%d> request: CMD_LOGIN, data length: %d, userName = %s, PassWord = %s...\n",
-                        _csock, login->dataLength, login->userName, login->password);
+                // printf("received client <socket=%d> request: CMD_LOGIN, data length: %d, userName = %s, PassWord = %s...\n",
+                        // _csock, login->dataLength, login->userName, login->password);
                 LoginResult ret;
                 ret.result = 666;  
                 SendData(_csock, &ret);
@@ -255,7 +257,7 @@ class EasyTcpServer
         {
             if(isRun() && header)
             {
-                printf("send successfully...\n");
+                // printf("send successfully...\n");
                 return send(_csock, static_cast<const void*>(header), header->dataLength, 0);
             }
             return SOCKET_ERROR;
@@ -279,6 +281,8 @@ class EasyTcpServer
         private:
             SOCKET _sock;
             std::vector<SOCKET> g_clients;
+
+            int port;
 };
 
 #endif // !_EasyTcpServer_hpp_

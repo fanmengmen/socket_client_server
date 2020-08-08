@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client.cpp.o"
+  "CMakeFiles/client.dir/consistenceHash.cpp.o"
+  "CMakeFiles/client.dir/murmurshash.cpp.o"
   "client.pdb"
   "client"
 )

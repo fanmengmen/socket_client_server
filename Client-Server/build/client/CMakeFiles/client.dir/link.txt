@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++17 -g -O0 -ggdb   CMakeFiles/client.dir/client.cpp.o  -o client -lpthread 
+/usr/bin/c++   -std=c++17 -g -O0 -ggdb   CMakeFiles/client.dir/client.cpp.o CMakeFiles/client.dir/consistenceHash.cpp.o CMakeFiles/client.dir/murmurshash.cpp.o  -o client -Wl,-rpath,/home/gf/Client-Server/build/http -lpthread ../http/libhttp.so 

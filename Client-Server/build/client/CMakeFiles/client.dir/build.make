@@ -81,17 +81,70 @@ client/CMakeFiles/client.dir/client.cpp.o.provides: client/CMakeFiles/client.dir
 client/CMakeFiles/client.dir/client.cpp.o.provides.build: client/CMakeFiles/client.dir/client.cpp.o
 
 
+client/CMakeFiles/client.dir/consistenceHash.cpp.o: client/CMakeFiles/client.dir/flags.make
+client/CMakeFiles/client.dir/consistenceHash.cpp.o: ../client/consistenceHash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gf/Client-Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object client/CMakeFiles/client.dir/consistenceHash.cpp.o"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/consistenceHash.cpp.o -c /home/gf/Client-Server/client/consistenceHash.cpp
+
+client/CMakeFiles/client.dir/consistenceHash.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/consistenceHash.cpp.i"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gf/Client-Server/client/consistenceHash.cpp > CMakeFiles/client.dir/consistenceHash.cpp.i
+
+client/CMakeFiles/client.dir/consistenceHash.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/consistenceHash.cpp.s"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gf/Client-Server/client/consistenceHash.cpp -o CMakeFiles/client.dir/consistenceHash.cpp.s
+
+client/CMakeFiles/client.dir/consistenceHash.cpp.o.requires:
+
+.PHONY : client/CMakeFiles/client.dir/consistenceHash.cpp.o.requires
+
+client/CMakeFiles/client.dir/consistenceHash.cpp.o.provides: client/CMakeFiles/client.dir/consistenceHash.cpp.o.requires
+	$(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/consistenceHash.cpp.o.provides.build
+.PHONY : client/CMakeFiles/client.dir/consistenceHash.cpp.o.provides
+
+client/CMakeFiles/client.dir/consistenceHash.cpp.o.provides.build: client/CMakeFiles/client.dir/consistenceHash.cpp.o
+
+
+client/CMakeFiles/client.dir/murmurshash.cpp.o: client/CMakeFiles/client.dir/flags.make
+client/CMakeFiles/client.dir/murmurshash.cpp.o: ../client/murmurshash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gf/Client-Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object client/CMakeFiles/client.dir/murmurshash.cpp.o"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/murmurshash.cpp.o -c /home/gf/Client-Server/client/murmurshash.cpp
+
+client/CMakeFiles/client.dir/murmurshash.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/murmurshash.cpp.i"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gf/Client-Server/client/murmurshash.cpp > CMakeFiles/client.dir/murmurshash.cpp.i
+
+client/CMakeFiles/client.dir/murmurshash.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/murmurshash.cpp.s"
+	cd /home/gf/Client-Server/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gf/Client-Server/client/murmurshash.cpp -o CMakeFiles/client.dir/murmurshash.cpp.s
+
+client/CMakeFiles/client.dir/murmurshash.cpp.o.requires:
+
+.PHONY : client/CMakeFiles/client.dir/murmurshash.cpp.o.requires
+
+client/CMakeFiles/client.dir/murmurshash.cpp.o.provides: client/CMakeFiles/client.dir/murmurshash.cpp.o.requires
+	$(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/murmurshash.cpp.o.provides.build
+.PHONY : client/CMakeFiles/client.dir/murmurshash.cpp.o.provides
+
+client/CMakeFiles/client.dir/murmurshash.cpp.o.provides.build: client/CMakeFiles/client.dir/murmurshash.cpp.o
+
+
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client.cpp.o"
+"CMakeFiles/client.dir/client.cpp.o" \
+"CMakeFiles/client.dir/consistenceHash.cpp.o" \
+"CMakeFiles/client.dir/murmurshash.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 client/client: client/CMakeFiles/client.dir/client.cpp.o
+client/client: client/CMakeFiles/client.dir/consistenceHash.cpp.o
+client/client: client/CMakeFiles/client.dir/murmurshash.cpp.o
 client/client: client/CMakeFiles/client.dir/build.make
+client/client: http/libhttp.so
 client/client: client/CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gf/Client-Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gf/Client-Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable client"
 	cd /home/gf/Client-Server/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +153,8 @@ client/CMakeFiles/client.dir/build: client/client
 .PHONY : client/CMakeFiles/client.dir/build
 
 client/CMakeFiles/client.dir/requires: client/CMakeFiles/client.dir/client.cpp.o.requires
+client/CMakeFiles/client.dir/requires: client/CMakeFiles/client.dir/consistenceHash.cpp.o.requires
+client/CMakeFiles/client.dir/requires: client/CMakeFiles/client.dir/murmurshash.cpp.o.requires
 
 .PHONY : client/CMakeFiles/client.dir/requires
 

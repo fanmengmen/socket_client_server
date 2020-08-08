@@ -47,7 +47,7 @@ class EasyTcpClient
             }
             else
             {
-                printf("creat socket sucessfully!\n");  
+                // printf("creat socket sucessfully!\n");  
             }
              
             return _sock;
@@ -73,7 +73,7 @@ class EasyTcpClient
             }
             else
             {
-                printf("connect server sucessfully!\n");
+                // printf("connect server sucessfully!\n");
             }
             return ret;
         }
@@ -146,7 +146,7 @@ class EasyTcpClient
         }
 
         //响应网络消息
-        void OnNetMsg(DataHeader* header)
+        virtual void OnNetMsg(DataHeader* header)
         {
             
             switch (header->cmd)
@@ -154,7 +154,7 @@ class EasyTcpClient
             case CMD_LOGIN_RESULT:
             {
                 LoginResult* login = static_cast<LoginResult* >(header);
-                printf("have received server message: CMD_LOGIN_RESULT, data length: %d\n",login->dataLength);
+                // printf("have received server message: CMD_LOGIN_RESULT, data length: %d\n",login->dataLength);
                 break;
             }
             case CMD_LOGOUT_RESULT:
@@ -173,7 +173,7 @@ class EasyTcpClient
         {
             if(isRun() && header)
             {
-                printf("send successfully...\n");
+                // printf("send successfully...\n");
                 return send(_sock, static_cast<const void* >(header), header->dataLength,0);
             }
             else

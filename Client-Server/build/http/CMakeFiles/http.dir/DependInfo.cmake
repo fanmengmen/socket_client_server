@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gf/Client-Server/server/server.cpp" "/home/gf/Client-Server/build/server/CMakeFiles/server.dir/server.cpp.o"
+  "/home/gf/Client-Server/http/HTTPMessage.cpp" "/home/gf/Client-Server/build/http/CMakeFiles/http.dir/HTTPMessage.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gf/Client-Server/build/http/CMakeFiles/http.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

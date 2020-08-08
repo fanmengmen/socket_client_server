@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++17 -g -O0 -ggdb   CMakeFiles/server.dir/server.cpp.o  -o server -lpthread 
+/usr/bin/c++   -std=c++17 -g -O0 -ggdb   CMakeFiles/server.dir/server.cpp.o  -o server -Wl,-rpath,/home/gf/Client-Server/build/http -lpthread ../http/libhttp.so 

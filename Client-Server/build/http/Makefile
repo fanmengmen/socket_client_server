@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gf/Client-Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gf/Client-Server/build/CMakeFiles /home/gf/Client-Server/build/client/CMakeFiles/progress.marks
-	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 client/all
+	cd /home/gf/Client-Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gf/Client-Server/build/CMakeFiles /home/gf/Client-Server/build/http/CMakeFiles/progress.marks
+	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 http/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gf/Client-Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 client/clean
+	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 http/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 client/preinstall
+	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 http/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 client/preinstall
+	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 http/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,100 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-client/CMakeFiles/client.dir/rule:
-	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 client/CMakeFiles/client.dir/rule
-.PHONY : client/CMakeFiles/client.dir/rule
+http/CMakeFiles/http.dir/rule:
+	cd /home/gf/Client-Server/build && $(MAKE) -f CMakeFiles/Makefile2 http/CMakeFiles/http.dir/rule
+.PHONY : http/CMakeFiles/http.dir/rule
 
 # Convenience name for target.
-client: client/CMakeFiles/client.dir/rule
+http: http/CMakeFiles/http.dir/rule
 
-.PHONY : client
+.PHONY : http
 
 # fast build rule for target.
-client/fast:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
-.PHONY : client/fast
+http/fast:
+	cd /home/gf/Client-Server/build && $(MAKE) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/build
+.PHONY : http/fast
 
-client.o: client.cpp.o
+HTTPMessage.o: HTTPMessage.cpp.o
 
-.PHONY : client.o
-
-# target to build an object file
-client.cpp.o:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/client.cpp.o
-.PHONY : client.cpp.o
-
-client.i: client.cpp.i
-
-.PHONY : client.i
-
-# target to preprocess a source file
-client.cpp.i:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/client.cpp.i
-.PHONY : client.cpp.i
-
-client.s: client.cpp.s
-
-.PHONY : client.s
-
-# target to generate assembly for a file
-client.cpp.s:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/client.cpp.s
-.PHONY : client.cpp.s
-
-consistenceHash.o: consistenceHash.cpp.o
-
-.PHONY : consistenceHash.o
+.PHONY : HTTPMessage.o
 
 # target to build an object file
-consistenceHash.cpp.o:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/consistenceHash.cpp.o
-.PHONY : consistenceHash.cpp.o
+HTTPMessage.cpp.o:
+	cd /home/gf/Client-Server/build && $(MAKE) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/HTTPMessage.cpp.o
+.PHONY : HTTPMessage.cpp.o
 
-consistenceHash.i: consistenceHash.cpp.i
+HTTPMessage.i: HTTPMessage.cpp.i
 
-.PHONY : consistenceHash.i
-
-# target to preprocess a source file
-consistenceHash.cpp.i:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/consistenceHash.cpp.i
-.PHONY : consistenceHash.cpp.i
-
-consistenceHash.s: consistenceHash.cpp.s
-
-.PHONY : consistenceHash.s
-
-# target to generate assembly for a file
-consistenceHash.cpp.s:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/consistenceHash.cpp.s
-.PHONY : consistenceHash.cpp.s
-
-murmurshash.o: murmurshash.cpp.o
-
-.PHONY : murmurshash.o
-
-# target to build an object file
-murmurshash.cpp.o:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/murmurshash.cpp.o
-.PHONY : murmurshash.cpp.o
-
-murmurshash.i: murmurshash.cpp.i
-
-.PHONY : murmurshash.i
+.PHONY : HTTPMessage.i
 
 # target to preprocess a source file
-murmurshash.cpp.i:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/murmurshash.cpp.i
-.PHONY : murmurshash.cpp.i
+HTTPMessage.cpp.i:
+	cd /home/gf/Client-Server/build && $(MAKE) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/HTTPMessage.cpp.i
+.PHONY : HTTPMessage.cpp.i
 
-murmurshash.s: murmurshash.cpp.s
+HTTPMessage.s: HTTPMessage.cpp.s
 
-.PHONY : murmurshash.s
+.PHONY : HTTPMessage.s
 
 # target to generate assembly for a file
-murmurshash.cpp.s:
-	cd /home/gf/Client-Server/build && $(MAKE) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/murmurshash.cpp.s
-.PHONY : murmurshash.cpp.s
+HTTPMessage.cpp.s:
+	cd /home/gf/Client-Server/build && $(MAKE) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/HTTPMessage.cpp.s
+.PHONY : HTTPMessage.cpp.s
 
 # Help Target
 help:
@@ -213,17 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... client"
+	@echo "... http"
 	@echo "... edit_cache"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
-	@echo "... consistenceHash.o"
-	@echo "... consistenceHash.i"
-	@echo "... consistenceHash.s"
-	@echo "... murmurshash.o"
-	@echo "... murmurshash.i"
-	@echo "... murmurshash.s"
+	@echo "... HTTPMessage.o"
+	@echo "... HTTPMessage.i"
+	@echo "... HTTPMessage.s"
 .PHONY : help
 
 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/HTTPMessage.hpp
+string
+-
+map
+-
+
+/home/gf/Client-Server/http/HTTPMessage.cpp
+HTTPMessage.hpp
+/home/gf/Client-Server/http/HTTPMessage.hpp
+

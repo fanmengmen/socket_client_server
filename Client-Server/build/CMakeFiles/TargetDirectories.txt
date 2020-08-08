@@ -6,3 +6,6 @@
 /home/gf/Client-Server/build/server/CMakeFiles/rebuild_cache.dir
 /home/gf/Client-Server/build/server/CMakeFiles/server.dir
 /home/gf/Client-Server/build/server/CMakeFiles/edit_cache.dir
+/home/gf/Client-Server/build/http/CMakeFiles/rebuild_cache.dir
+/home/gf/Client-Server/build/http/CMakeFiles/http.dir
+/home/gf/Client-Server/build/http/CMakeFiles/edit_cache.dir

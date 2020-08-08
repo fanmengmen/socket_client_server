@@ -4,4 +4,12 @@
 client/CMakeFiles/client.dir/client.cpp.o
  ../include/EasyTcpClient.hpp
  ../include/MessageHeader.hpp
+ ../include/consistenceHash.hpp
  /home/gf/Client-Server/client/client.cpp
+client/CMakeFiles/client.dir/consistenceHash.cpp.o
+ ../include/consistenceHash.hpp
+ ../include/murmurhash.hpp
+ /home/gf/Client-Server/client/consistenceHash.cpp
+client/CMakeFiles/client.dir/murmurshash.cpp.o
+ ../include/murmurhash.hpp
+ /home/gf/Client-Server/client/murmurshash.cpp
